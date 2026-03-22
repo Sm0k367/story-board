@@ -1,0 +1,13 @@
+# railway.toml - Railway deployment config
+[build]
+# Pre-install Python3, pip, FFmpeg BEFORE Node setup
+preInstall = "sudo apt-get update && sudo apt-get install -y python3 python3-pip ffmpeg"
+
+# Install Node dependencies after system deps
+install = "npm install"
+
+# No postInstall needed unless you add requirements.txt later
+
+[start]
+# Start your server!
+cmd = "node index.js"
