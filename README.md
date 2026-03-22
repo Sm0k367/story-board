@@ -2,9 +2,11 @@
 
 > **Revolutionize storyboarding and video creation with open-source AI copilots and Groq LLMs, not corporate overlords.**
 
+---
+
 ## 🚀 What is StoryBoard?
 
-*StoryBoard* is a modular API: turn a prompt into a story, powered by Groq’s blazing-fast LLMs and ready for your own media pipeline.
+*StoryBoard* isn’t just a chatbot—it’s a set of composable, code-powered endpoints built for turning prompts into cinematic boards or stories using the power of Groq’s LLMs, plus your own creative media pipeline.
 
 ---
 
@@ -13,33 +15,34 @@
 | Piece | Tech | Why? |
 |-----------------|----------------------------|----------------------------|
 | Orchestration | **Node.js (Express)** | Fast, hackable, JS-native |
-| LLM Integration | **Groq API** | Ridiculously fast LLMs |
-| Art/Video Mage | **Python (OpenCV/FFmpeg)** | Real image/video manipulation |
-| API/Integration | **Express/Python scripts** | Plays nice with everything |
-| Deployment | **Railway (Docker)** | Simple, robust |
+| LLM Integration | **Groq API** | Lightning-fast LLMs |
+| Art/Video Mage | **Python (OpenCV/FFmpeg)** | Media made real |
+| API/Integration | **Express/Python scripts** | Flexible, remixable |
+| Deployment | **Railway (Dockerfile)** | Easy, reliable, CI/CD |
 
 ---
 
 ## ⚡ Quickstart
 
-1. **Add environment variable:**
-In Railway, add your Groq API key as `GROQ_API_KEY` (never hard-coded).
+1. **Set your Groq API key:**
+In Railway > Variables:
+Key: `GROQ_API_KEY`
+Value: *(your Groq key)*
 
 2. **Deploy:**
-Railway (Dockerfile) will install Node, Python, ffmpeg, and your dependencies.
+No clicks—Railway builds from your Dockerfile.
 
-3. **POST a prompt:**
+3. **Test your endpoint:**
 ```sh
 curl -X POST https://your-railway-url.up.railway.app/storyboard \
 -H "Content-Type: application/json" \
 -d "{\"prompt\": \"Aliens land in Paris at dawn\"}"
-Result:
-Returns a Groq-generated story for your prompt!
+You should get:
+Groq-powered story if the key is set
+Otherwise, a fallback from the Python stub
 📝 Environment variables
-GROQ_API_KEY — Your secret Groq API key (set in Railway, not in code)
+GROQ_API_KEY: Your Groq API key (set in Railway, not in code)
 🧩 More integrations
-Media pipeline uses Python stubs, ready for image/video models
-Add more API routes or pipelines as you grow
-You are now Groq-powered and ready for the big leagues.
-
+Add Python packages to requirements.txt as you evolve
+Point /video or /storyboard handlers at any new generation pipeline
 “Storyboards are dead. Long live StoryBoard.” 🚀
