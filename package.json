@@ -1,0 +1,18 @@
+{
+"name": "story-board",
+"version": "1.0.0",
+"description": "AI-powered collaborative storyboard and video generator—Hollywood muscle, open-source soul.",
+"main": "index.js",
+"scripts": {
+"start": "node index.js",
+"storyboard": "python3 storyboard.py",
+"video": "python3 video.py"
+},
+"dependencies": {
+"express": "^4.18.2",
+"axios": "^1.6.0"
+},
+"devDependencies": {},
+"author": "Sm0k367 + AI Co-Creator",
+"license": "MIT"
+}
