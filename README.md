@@ -1,12 +1,12 @@
-# ✨🎬 StoryWeaver: Hollywood in Your Terminal 🎬✨
+# ✨🎬 StoryBoard: Hollywood in Your Terminal 🎬✨
 
 > **Revolutionize storyboarding and video creation with open-source AI copilots, not corporate overlords.**
 
 ---
 
-## 🚀 What is StoryWeaver?
+## 🚀 What is StoryBoard?
 
-*StoryWeaver* isn’t just a chatbot—it’s a crew of creative AI “video agents” built to riff, storyboard, and compose cinematic scenes from your ideas. Take your story from conversation to illustrated board to GIF or video, no velvet ropes, no studio execs. All modular, all open-source, all yours.
+*StoryBoard* isn’t just a chatbot—it’s a crew of creative AI “video agents” built to riff, storyboard, and compose cinematic scenes from your ideas. Take your story from conversation to illustrated board to GIF or video, no velvet ropes, no studio execs. All modular, all open-source, all yours.
 
 ---
 
@@ -24,8 +24,8 @@
 
 ## ⚡ Quickstart
 
-1. **Clone or create the StoryWeaver Gist/Repo**
-2. **Install the stack:**
+1. **Clone this repo**
+2. **Install everything:**
 ```sh
 npm install
 # ...also make sure you have Python 3.x and ffmpeg installed!
@@ -52,4 +52,4 @@ MIT — Use it for commercial or personal projects. Credit is optional; bragging
 Plug into a real Rasa chatbot, test wild prompts
 Swap in your own image models or video renderers
 Deploy anywhere & show off what Hollywood could never imagine
-“Storyboards are dead. Long live StoryWeaver.” 🚀
+“Storyboards are dead. Long live StoryBoard.” 🚀
