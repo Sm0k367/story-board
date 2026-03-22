@@ -1,0 +1,5 @@
+# requirements.txt
+# (Uncomment/add Python libraries as needed)
+# opencv-python
+# numpy
+# pillow
