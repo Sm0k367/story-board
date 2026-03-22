@@ -1,5 +1,16 @@
+# Node modules
 node_modules/
+
+# Python cache
 __pycache__/
-.env
 *.pyc
+
+# Environment variables (never commit secrets!)
+.env
+
+# OS junk
 .DS_Store
+
+# Railway/deployment extras (optional)
+docker-compose.yml
+railway.toml
