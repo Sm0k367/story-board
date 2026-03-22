@@ -1,55 +1,45 @@
 # ✨🎬 StoryBoard: Hollywood in Your Terminal 🎬✨
 
-> **Revolutionize storyboarding and video creation with open-source AI copilots, not corporate overlords.**
-
----
+> **Revolutionize storyboarding and video creation with open-source AI copilots and Groq LLMs, not corporate overlords.**
 
 ## 🚀 What is StoryBoard?
 
-*StoryBoard* isn’t just a chatbot—it’s a crew of creative AI “video agents” built to riff, storyboard, and compose cinematic scenes from your ideas. Take your story from conversation to illustrated board to GIF or video, no velvet ropes, no studio execs. All modular, all open-source, all yours.
+*StoryBoard* is a modular API: turn a prompt into a story, powered by Groq’s blazing-fast LLMs and ready for your own media pipeline.
 
 ---
 
 ## 🛠️ Tech Stack
 
 | Piece | Tech | Why? |
-|-----------------|---------------------------|----------------------------|
+|-----------------|----------------------------|----------------------------|
 | Orchestration | **Node.js (Express)** | Fast, hackable, JS-native |
-| Chatbot Brain | **Rasa** | Open-source, smart, pluggable |
-| Art/Video Mage | **Python (OpenCV/FFmpeg)**| Real image/video manipulation |
-| API/Integration | **Express/Python scripts**| Plays nice with everything |
-| Deployment | **Anywhere (Vercel, etc)**| Flexible by design |
+| LLM Integration | **Groq API** | Ridiculously fast LLMs |
+| Art/Video Mage | **Python (OpenCV/FFmpeg)** | Real image/video manipulation |
+| API/Integration | **Express/Python scripts** | Plays nice with everything |
+| Deployment | **Railway (Docker)** | Simple, robust |
 
 ---
 
 ## ⚡ Quickstart
 
-1. **Clone this repo**
-2. **Install everything:**
+1. **Add environment variable:**
+In Railway, add your Groq API key as `GROQ_API_KEY` (never hard-coded).
+
+2. **Deploy:**
+Railway (Dockerfile) will install Node, Python, ffmpeg, and your dependencies.
+
+3. **POST a prompt:**
 ```sh
-npm install
-# ...also make sure you have Python 3.x and ffmpeg installed!
-Run the API server:
-shCopyCopied!
-node index.js
-Spin up a stub storyboard (test the pipe):
-shCopyCopied!
-npm run storyboard -- --prompt "Aliens land in Paris at dawn"
-📦 What’s in the Box?
-package.json — dependencies & run scripts
-index.js — Express server; endpoints for /storyboard & /video (calls Python backends)
-storyboard.py — Python stub for “draw my story” (plug in SDXL/OpenCV)
-video.py — Python stub for “assemble my film” (plug in real FFmpeg compositing)
-rasa_integration.md — Guide for wiring up Rasa bots
-🧩 Why Open Source?
-Because gatekeeping creativity is boring. Pros build in public.
-Remix it. Break it. Outpace Netflix if you want.
+curl -X POST https://your-railway-url.up.railway.app/storyboard \
+-H "Content-Type: application/json" \
+-d "{\"prompt\": \"Aliens land in Paris at dawn\"}"
+Result:
+Returns a Groq-generated story for your prompt!
+📝 Environment variables
+GROQ_API_KEY — Your secret Groq API key (set in Railway, not in code)
+🧩 More integrations
+Media pipeline uses Python stubs, ready for image/video models
+Add more API routes or pipelines as you grow
+You are now Groq-powered and ready for the big leagues.
 
-🚦 License
-MIT — Use it for commercial or personal projects. Credit is optional; bragging is mandatory.
-
-⏭️ Next Steps
-Plug into a real Rasa chatbot, test wild prompts
-Swap in your own image models or video renderers
-Deploy anywhere & show off what Hollywood could never imagine
 “Storyboards are dead. Long live StoryBoard.” 🚀
